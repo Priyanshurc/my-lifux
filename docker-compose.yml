@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:14
+    container_name: mylifux-postgres
+    environment:
+      POSTGRES_DB: mylifux_db
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  backend:
+    build:
+      context: ./gateway
+    container_name: mylifux-backend
+    environment:
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_USER=user
+      - DB_PASSWORD=password
+      - DB_NAME=mylifux_db
+    depends_on:
+      - postgres
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./gateway:/app
+    command: npm start
+
+  frontend:
+    build:
+      context: .
+    container_name: mylifux-frontend
+    ports:
+      - "4173:4173"
+    depends_on:
+      - backend
+    volumes:
+      - .:/app
+
+volumes:
+  pgdata:
