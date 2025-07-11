@@ -6,7 +6,6 @@ import Navigation from './components/molecules/Navigation.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Navigation />
     <App />
   </StrictMode>,
 )

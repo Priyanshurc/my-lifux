@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
+  color: #ffffff;
 }
 
 /* Keep this only if you're still using the spinning logo */
@@ -36,4 +37,10 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
+}
+
+/* App.css */
+
+.app-wrapper {
+  padding-top: 4rem; /* Adjust to your Navbar height */
 }

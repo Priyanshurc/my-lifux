@@ -1,4 +1,8 @@
 .min-h-screen{
-    min-height: 100%;
     background-color: #124559;
+  min-height: 100vh;
+  padding-top: 5rem; /* Space for fixed navbar */
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: white;
 }
