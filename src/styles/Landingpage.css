@@ -1,8 +1,58 @@
-.min-h-screen{
-    background-color: #124559;
+/* Landingpage.css */
+
+
+.section {
   min-height: 100vh;
-  padding-top: 5rem; /* Space for fixed navbar */
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 4rem 2rem;
+  background-color: #124559;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+.about-section {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  background-color: #EFF6E0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+
+.projects-section {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  background-color: #AEC3B0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+.contact-section {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  background-color: #01161E;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }

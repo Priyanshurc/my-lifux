@@ -1,10 +1,27 @@
 import HeroSection from "../organisms/HeroSection";
-import "../../styles/Landingpage.css"; 
+import "../../styles/Landingpage.css";
 
 const LandingPage = () => (
-  <div className="min-h-screen" style={{ paddingLeft: '22rem' , paddingRight:'11rem', paddingTop: '4rem' }}>
-    <main className="pt-20"> {/* Padding to offset fixed navbar height */}
-      <HeroSection />
+  <div className="landing-page">
+    <main>
+      <section id="home" className="section">
+        <HeroSection />
+      </section>
+
+      <section id="projects" className="projects-section">
+        <h2>Projects</h2>
+        {/* Add project cards here */}
+      </section>
+
+      <section id="about" className="about-section">
+        <h2>About Me</h2>
+        {/* Add about content here */}
+      </section>
+
+      <section id="contact" className="contact-section">
+        <h2>Contact Me</h2>
+        {/* Add contact form/info here */}
+      </section>
     </main>
   </div>
 );
